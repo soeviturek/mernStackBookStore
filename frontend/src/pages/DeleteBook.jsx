@@ -10,7 +10,8 @@ const DeleteBook = ()=>{
     const [loading,setLoading] = useState(false);
     const handleDeleteBook = ()=>{
         setLoading(true);
-        axios.delete(`http://localhost:5555/books/${id}`,id).then(()=>{
+        //http://localhost:5555
+        axios.delete(`https://mernstackbookstore.onrender.com/books/${id}`,id).then(()=>{
             setLoading(false);
             navigate("/");
         }).catch((error)=>{

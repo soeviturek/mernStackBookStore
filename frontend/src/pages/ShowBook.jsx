@@ -10,7 +10,7 @@ const ShowBook = ()=>{
     const {id} = useParams();
     useEffect(()=>{
         setLoading(true);
-        axios.get(`http://localhost:5555/books/${id}`).then((response)=>{
+        axios.get(`https://mernstackbookstore.onrender.com/books/${id}`).then((response)=>{
             setBook(response.data);
         }).catch((error)=>{
             console.log(error);
